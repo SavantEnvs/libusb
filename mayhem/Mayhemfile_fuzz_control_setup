@@ -1,0 +1,9 @@
+project: savantenvs/libusb
+target: fuzz_control_setup
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_control_setup/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_control_setup
+    libfuzzer: true
+    timeout: 5

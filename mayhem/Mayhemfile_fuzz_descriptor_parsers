@@ -1,0 +1,9 @@
+project: savantenvs/libusb
+target: fuzz_descriptor_parsers
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_descriptor_parsers/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_descriptor_parsers
+    libfuzzer: true
+    timeout: 5
